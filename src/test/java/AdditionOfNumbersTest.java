@@ -37,4 +37,19 @@ class AdditionOfNumbersTest {
         Assertions.assertEquals(15, output);
     }
 
+    @Test
+    public void isStringHasCommaNSpace()
+    {
+        AdditionOfNumbers additionOfNumbers = new AdditionOfNumbers();
+        int output = additionOfNumbers.Add("1\n2,3");
+        Assertions.assertEquals(6, output);
+    }
+
+    @Test
+    public void isStringHasCommaNSpaceNDelimeter()
+    {
+        AdditionOfNumbers additionOfNumbers = new AdditionOfNumbers();
+        int output = additionOfNumbers.Add("//;\n1;2");
+        Assertions.assertEquals(3, output);
+    }
 }
