@@ -52,4 +52,13 @@ class AdditionOfNumbersTest {
         int output = additionOfNumbers.Add("//;\n1;2");
         Assertions.assertEquals(3, output);
     }
+
+    @Test
+    public void whenNegativeNotAllowed()
+    {
+        AdditionOfNumbers additionOfNumbers = new AdditionOfNumbers();
+        Assertions.assertThrows(RuntimeException.class, () ->
+        { additionOfNumbers.Add("-1,-2,1,2");
+        });
+    }
 }
